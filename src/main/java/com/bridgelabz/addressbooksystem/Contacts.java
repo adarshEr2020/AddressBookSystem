@@ -10,6 +10,7 @@ public class Contacts {
 	Long phoneNumber;
 	String email;
 
+	// Contractor
 	public Contacts(String firstName, String lastName, String address, String city, String state, Long zipCode,
 			Long phoneNumber, String email) {
 		this.firstName = firstName;
@@ -26,6 +27,8 @@ public class Contacts {
 		
 	}
 	
+	
+// All getters and setters method
 	public String getFirstName() {
 		return firstName;
 	}
@@ -88,5 +91,13 @@ public class Contacts {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	// toString methoda
+	@Override
+	public String toString() {
+		return "Contacts [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", City=" + City
+				+ ", state=" + state + ", zipCode=" + zipCode + ", phoneNumber=" + phoneNumber + ", email=" + email
+				+ "]";
 	}
 }

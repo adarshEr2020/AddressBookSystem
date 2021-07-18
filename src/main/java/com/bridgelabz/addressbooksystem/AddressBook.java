@@ -43,4 +43,19 @@ public class AddressBook {
 		contact.setEmail(email);
 		System.out.println(contact);
 	}
+	
+	// Ability to edit existing contact
+		public void editContact() {
+			System.out.println("Enter First Name of Persion");
+			String editName = sc.nextLine();
+			if (editName.equalsIgnoreCase(contact.firstName)) {
+				add();
+				 System.out.println(contact);
+			} else {
+				System.out.println("Invalid Name......!");
+				System.out.println("Please enter valid First Name");
+				editContact();
+			}
+
+		}
 }
