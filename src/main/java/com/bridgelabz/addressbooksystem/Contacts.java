@@ -9,7 +9,6 @@ public class Contacts {
 	private Long phone;
 	private String email;
 
-	
 	public Contacts(String fName, String lName, String address, String city, String state, Long zip, Long phone,
 			String email) {
 		this.fName = fName;
@@ -91,11 +90,12 @@ public class Contacts {
 		return email.equals(other.getEmail());
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "\nFirst_Name  : " + fName + "\nLast_Name   : " + lName + "\nAddress     : " + address
-				+ "\nCity        : " + city + "\nState       : " + state + "\nZIP Code    : " + zip + "\nPhone_Number: "
-				+ phone + "\nEmail_ID    : " + email + "\n-----------------------------------";
+		return "Contacts{" + "fName='" + fName + '\'' + ", lName='" + lName + '\'' + ", address='" + address + '\''
+				+ ", city='" + city + '\'' + ", state='" + state + '\'' + ", zip=" + zip + ", phone=" + phone
+				+ ", email='" + email + '\'' + '}';
 	}
-
 }

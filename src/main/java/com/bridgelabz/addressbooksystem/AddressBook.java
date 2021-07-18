@@ -9,7 +9,6 @@ public class AddressBook {
 	public static Map<String, Contacts> nameHashMap = new HashMap<String, Contacts>();
 	public static Map<String, Contacts> cityHashMap = new HashMap<String, Contacts>();
 	public static Map<String, Contacts> stateHashMap = new HashMap<String, Contacts>();
-
 	static Scanner sc = new Scanner(System.in);
 	static AddressBook addressBook = new AddressBook();
 
@@ -139,7 +138,6 @@ public class AddressBook {
 			switch (choice) {
 			case 1:
 				if (addContact(readContact())) // call addcontact with passing method readcontact
-
 					System.out.println("Cotact Added Successfully....!");
 				else
 					System.out.println("Contact Already Exist....!");
@@ -264,7 +262,7 @@ public class AddressBook {
 		switch (choice) {
 		case 1:
 			Map<String, Long> countCity = contactList.stream()
-					.collect(Collectors.groupingBy(e-> e.getCity(), Collectors.counting()));
+					.collect(Collectors.groupingBy(e -> e.getCity(), Collectors.counting()));
 			System.out.println(countCity + "\n");
 			break;
 		case 2:
@@ -296,6 +294,7 @@ public class AddressBook {
 			break;
 		case 2:
 			addressBook.sortBy(Contacts::getlName).forEach(System.out::println);
+		
 			break;
 		case 3:
 			addressBook.sortBy(Contacts::getCity).forEach(System.out::println);
@@ -312,4 +311,5 @@ public class AddressBook {
 			System.out.println("INVALID CHOICE!");
 		}
 	}
+
 }
