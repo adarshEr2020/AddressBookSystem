@@ -1,11 +1,15 @@
 package com.bridgelabz.addressbooksystem;
 
+/**
+ * Address Book Main!
+ *
+ */
 import java.util.*;
 
 public class AddressBookMain {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		//AddressBook addressBook = new AddressBook();
+		AddressBook addressBook = new AddressBook();
 		Map<String, AddressBook> addressBookMap = new HashMap<String, AddressBook>();
 
 		while (true) {
@@ -13,7 +17,8 @@ public class AddressBookMain {
 			System.out.println("1. New Address Book");
 			System.out.println("2. Select Address Book");
 			System.out.println("3. Delete Address Book");
-			System.out.println("4. Exit");
+			System.out.println("4. Search Contact Data");
+			System.out.println("5. Exit");
 			System.out.print("Enter Your choice: ");
 			int choice = sc.nextInt();
 			sc.nextLine();
@@ -24,20 +29,20 @@ public class AddressBookMain {
 				sc.nextLine();
 				addressBookMap.put(bookName, new AddressBook());// adding bookname as a key and vlue is allocating
 																// memory for addressbook obj
-				AddressBook.addressBookOptions(addressBookMap.get(bookName));// call addressbookoption method with
+				addressBook.addressBookOptions(addressBookMap.get(bookName));// call addressbookoption method with
 																				// passing key of hashmap
 				break;
 			case 2:
 				System.out.println("List of available Address Book : ");
-				Set<String> keys = addressBookMap.keySet();// retrived keys from hashmap to show addressbooklist
-				Iterator<String> i = keys.iterator();
+				Set keys = addressBookMap.keySet();// retrived keys from hashmap to show addressbooklist
+				Iterator i = keys.iterator();
 				while (i.hasNext()) {
 					System.out.println(i.next());
 				}
 				System.out.println("Enter Address Book name you want to Open : ");
 				String name = sc.nextLine();
 				System.out.println("Current Address Book is : " + name);
-				AddressBook.addressBookOptions(addressBookMap.get(name));// call method with passing address book name
+				addressBook.addressBookOptions(addressBookMap.get(name));// call method with passing address book name
 				break;
 			case 3:
 				System.out.println("Enter Address Book name to be delete: ");
@@ -45,14 +50,15 @@ public class AddressBookMain {
 				addressBookMap.remove(name);// delete hashmap using remove fun
 				break;
 			case 4:
+				System.out.println("Welcome to the search option:");
+				addressBook.searchByOptions();
+			case 5:
 				sc.close();// for closing the programme
 				return;
 			default:
 				System.out.println("You Entered Invalid Choice....!");
 				break;
 			}
-
 		}
-		
 	}
 }
