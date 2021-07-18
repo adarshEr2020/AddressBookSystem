@@ -1,103 +1,105 @@
 package com.bridgelabz.addressbooksystem;
-
 public class Contacts {
-	String firstName;
-	String lastName;
-	String address;
-	String City;
-	String state;
-	Long zipCode;
-	Long phoneNumber;
-	String email;
+    String firstName;
+    String lastName;
+    String address;
+    String city;
+    String state;
+    Long zipCode;
+    Long phoneNumber;
+    String email;
 
-	// Contractor
-	public Contacts(String firstName, String lastName, String address, String city, String state, Long zipCode,
-			Long phoneNumber, String email) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
-		this.City = city;
-		this.state = state;
-		this.zipCode = zipCode;
-		this.phoneNumber = phoneNumber;
-		this.email = email;
-	}
+    //getter and setter methods
+    
+    public String getFirstName() {
+        return firstName;
+    }
 
-	Contacts(){
-		
-	}
-	
-	
-// All getters and setters method
-	public String getFirstName() {
-		return firstName;
-	}
+    
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public String getLastName() {
 
-	public String getLastName() {
-		return lastName;
-	}
+        return lastName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setLastName(String lastName) {
 
-	public String getAddress() {
-		return address;
-	}
+        this.lastName = lastName;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public String getAddress() {
 
-	public String getCity() {
-		return City;
-	}
+        return address;
+    }
 
-	public void setCity(String city) {
-		City = city;
-	}
+    public void setAddress(String address) {
 
-	public String getState() {
-		return state;
-	}
+        this.address = address;
+    }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    public String getCity() {
 
-	public Long getZipCode() {
-		return zipCode;
-	}
+        return city;
+    }
 
-	public void setZipCode(Long zipCode) {
-		this.zipCode = zipCode;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public Long getPhoneNumber() {
-		return phoneNumber;
-	}
+    public String getState() {
 
-	public void setPhoneNumber(Long phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+        return state;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setState(String state) {
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	// toString method
-	@Override
-	public String toString() {
-		return "Contacts [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", City=" + City
-				+ ", state=" + state + ", zipCode=" + zipCode + ", phoneNumber=" + phoneNumber + ", email=" + email
-				+ "]";
-	}
+        this.state = state;
+    }
+
+    public Long getZipCode() {
+
+        return zipCode;
+    }
+
+    public void setZipCode(Long zipCode) {
+
+        this.zipCode = zipCode;
+    }
+
+    public Long getPhoneNumber() {
+
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(Long phoneNumber) {
+
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+
+        return email;
+    }
+
+    public void setEmail(String email) {
+
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Contacts{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
