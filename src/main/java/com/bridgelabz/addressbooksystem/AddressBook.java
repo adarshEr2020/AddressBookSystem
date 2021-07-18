@@ -4,14 +4,12 @@ import java.util.Scanner;
 
 public class AddressBook {
 	Contacts contact;
-	Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);// object of scanner class
 
 	public void add() {
 
-		contact = new Contacts();
-		
-		//Takes input from user
-		
+		contact = new Contacts();//create object of contact class
+
 		System.out.println("Enter First Name: ");
 		String firstName = sc.nextLine();
 		System.out.println("Enter last Name: ");
@@ -30,9 +28,8 @@ public class AddressBook {
 		sc.nextLine();
 		System.out.println("Enter your EMail ID: ");
 		String email = sc.nextLine();
-		
-		//calling the set method
-		
+
+			//calling the set method
 		contact.setFirstName(firstName);
 		contact.setLastName(lastName);
 		contact.setAddress(address);
@@ -42,20 +39,35 @@ public class AddressBook {
 		contact.setPhoneNumber(phoneNum);
 		contact.setEmail(email);
 		System.out.println(contact);
+
 	}
 	
-	// Ability to edit existing contact
-		public void editContact() {
-			System.out.println("Enter First Name of Persion");
-			String editName = sc.nextLine();
-			if (editName.equalsIgnoreCase(contact.firstName)) {
-				add();
-				 System.out.println(contact);
-			} else {
-				System.out.println("Invalid Name......!");
-				System.out.println("Please enter valid First Name");
-				editContact();
-			}
+	//ability to edit existing contact
+	
+	public void editContact() {
+		System.out.println("Enter First Name of Persion");
+		String editName = sc.nextLine();
+		if (editName.equalsIgnoreCase(contact.firstName)) {
+			add();
+			// System.out.println(contact);
+		} else {
+			System.out.println("Invalid Name......!");
+			System.out.println("Please enter valid First Name");
+			editContact();
+		}
+
+	}
+	//ability to delete existing contact
+
+	public void delete() {
+		System.out.println("Enter First Name of Persion");
+		String editName = sc.nextLine();
+		if (editName.equals(contact.firstName)) {
+			System.out.println("you are deleted " + contact.firstName + "data");
+
+			contact = null;
 
 		}
+
+	}
 }

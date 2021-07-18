@@ -93,7 +93,7 @@ public class Contacts {
 		this.email = email;
 	}
 	
-	// toString methoda
+	// toString method
 	@Override
 	public String toString() {
 		return "Contacts [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", City=" + City
